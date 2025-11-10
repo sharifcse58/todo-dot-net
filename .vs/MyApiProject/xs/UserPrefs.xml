@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{C0D0E675-E8F9-D81F-0AA2-AC8D7C9F72D6}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
+    <Files>
+      <File FileName="Middleware/ApiKeyMiddleware.cs" Line="29" Column="14" />
+      <File FileName="Models/User.cs" />
+      <File FileName="Properties/launchSettings.json" />
+      <File FileName="Repositories/IUserRepository.cs" />
+      <File FileName="Repositories/UserRepository.cs" Line="27" Column="40" />
+      <File FileName="Program.cs" Line="55" Column="1" />
+      <File FileName="MongoDbContext.cs" />
+      <File FileName="appsettings.json" Line="15" Column="24" />
+      <File FileName="Controllers/UsersController.cs" />
+      <File FileName="appsettings.Development.json" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MyApiProject">
+            <Node name="MyApiProject">
+              <Node name="Middleware" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MyApiProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>

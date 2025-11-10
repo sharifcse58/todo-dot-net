@@ -1075,11 +1075,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/md.shoriful/Documents/Sites/dotNet/MyApiProject/MyApiProject.csproj",
+      "projectUniqueName": "/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/MyApiProject.csproj",
       "projectName": "MyApiProject",
-      "projectPath": "/Users/md.shoriful/Documents/Sites/dotNet/MyApiProject/MyApiProject.csproj",
+      "projectPath": "/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/MyApiProject.csproj",
       "packagesPath": "/Users/md.shoriful/.nuget/packages/",
-      "outputPath": "/Users/md.shoriful/Documents/Sites/dotNet/MyApiProject/obj/",
+      "outputPath": "/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/md.shoriful/.nuget/NuGet/NuGet.Config"
