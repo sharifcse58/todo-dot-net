@@ -18,4 +18,8 @@ public class User
 
     [StringLength(30)]
     public string? Role { get; set; }
+
+    [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
 }

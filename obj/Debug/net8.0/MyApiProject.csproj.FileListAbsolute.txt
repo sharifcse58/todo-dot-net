@@ -76,3 +76,4 @@
 /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/MyApiProject.pdb
 /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/MyApiProject.genruntimeconfig.cache
 /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/ref/MyApiProject.dll
+/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/bin/Debug/net8.0/Bogus.dll

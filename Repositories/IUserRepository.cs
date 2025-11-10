@@ -4,9 +4,14 @@ namespace MyApiProject.Repositories;
 
 public interface IUserRepository
 {
-    Task<IEnumerable<User>> GetAllAsync();
+    Task<IEnumerable<User>> GetAllAsync(int page = 1, int pageSize = 10);
     Task<User?> GetByIdAsync(string id);
     Task<User> CreateAsync(User user);
     Task<bool> UpdateAsync(string id, User user);
     Task<bool> DeleteAsync(string id);
+
+    // Bulk insert method to add multiple users at once
+    Task BulkInsertAsync(IEnumerable<User> users);
+
+
 }

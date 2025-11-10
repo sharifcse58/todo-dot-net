@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "Bogus/35.6.5": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Bogus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Bogus.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DnsClient/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -319,6 +332,27 @@
     }
   },
   "libraries": {
+    "Bogus/35.6.5": {
+      "sha512": "2FGZn+aAVHjmCgClgmGkTDBVZk0zkLvAKGaxEf5JL6b3i9JbHTE4wnuY4vHCuzlCmJdU6VZjgDfHwmYkQF8VAA==",
+      "type": "package",
+      "path": "bogus/35.6.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "bogus.128.png",
+        "bogus.35.6.5.nupkg.sha512",
+        "bogus.nuspec",
+        "lib/net40/Bogus.dll",
+        "lib/net40/Bogus.xml",
+        "lib/net6.0/Bogus.dll",
+        "lib/net6.0/Bogus.xml",
+        "lib/netstandard1.3/Bogus.dll",
+        "lib/netstandard1.3/Bogus.xml",
+        "lib/netstandard2.0/Bogus.dll",
+        "lib/netstandard2.0/Bogus.xml"
+      ]
+    },
     "DnsClient/1.6.1": {
       "sha512": "4H/f2uYJOZ+YObZjpY9ABrKZI+JNw3uizp6oMzTXwDw6F+2qIPhpRl/1t68O/6e98+vqNiYGu+lswmwdYUy3gg==",
       "type": "package",
@@ -1064,6 +1098,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Bogus >= 35.6.5",
       "Microsoft.AspNetCore.OpenApi >= 8.0.16",
       "MongoDB.Driver >= 3.5.0",
       "Swashbuckle.AspNetCore >= 6.6.2"
@@ -1111,6 +1146,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Bogus": {
+            "target": "Package",
+            "version": "[35.6.5, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[8.0.16, )"

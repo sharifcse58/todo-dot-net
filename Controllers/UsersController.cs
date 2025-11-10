@@ -14,8 +14,18 @@ public class UsersController : ControllerBase
 
     // GET /api/users
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<User>>> GetAll()
-        => Ok(await _repo.GetAllAsync());
+    public async Task<ActionResult<IEnumerable<User>>> GetAll([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
+    {
+        var users = await _repo.GetAllAsync(page, pageSize);
+        return Ok(new
+        {
+            page,
+            pageSize,
+            count = users.Count(),
+            data = users
+        });
+    }
+
 
     // GET /api/users/{id}
     [HttpGet("{id:length(24)}")]

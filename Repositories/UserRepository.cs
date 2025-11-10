@@ -12,8 +12,22 @@ public class UserRepository : IUserRepository
         _users = ctx.Users;
     }
 
-    public async Task<IEnumerable<User>> GetAllAsync() =>
-        await _users.Find(_ => true).ToListAsync();
+    public async Task<IEnumerable<User>> GetAllAsync(int page = 1, int pageSize = 10)
+    {
+        if (page < 1) page = 1;
+        if (pageSize < 1) pageSize = 10;
+
+        var skip = (page - 1) * pageSize;
+
+        var users = await _users.Find(_ => true)
+            .SortByDescending(u => u.CreatedAt)
+            .Skip(skip)
+            .Limit(pageSize)
+            .ToListAsync();
+
+        return users;
+    }
+
 
     public async Task<User?> GetByIdAsync(string id) =>
         await _users.Find(u => u.Id == id).FirstOrDefaultAsync();
@@ -36,4 +50,41 @@ public class UserRepository : IUserRepository
         var result = await _users.DeleteOneAsync(u => u.Id == id);
         return result.IsAcknowledged && result.DeletedCount > 0;
     }
+
+    //public async Task BulkInsertAsync(IEnumerable<User> users)
+    //{
+    //    if (users == null || !users.Any()) return;
+
+    //    // Use MongoDB bulk insert for efficiency
+    //    await _users.InsertManyAsync(users, new InsertManyOptions
+    //    {
+    //        IsOrdered = false // continue on errors
+    //    });
+    //}
+
+    private static readonly SemaphoreSlim _seederLock = new SemaphoreSlim(1, 1);
+
+    public async Task BulkInsertAsync(IEnumerable<User> users)
+    {
+        if (users == null || !users.Any()) return;
+
+        await _seederLock.WaitAsync(); // ensures one bulk insert runs at a time
+        try
+        {
+            const int batchSize = 2000;
+            var userList = users.ToList();
+
+            for (int i = 0; i < userList.Count; i += batchSize)
+            {
+                var batch = userList.Skip(i).Take(batchSize).ToList();
+                await _users.InsertManyAsync(batch, new InsertManyOptions { IsOrdered = false });
+            }
+        }
+        finally
+        {
+            _seederLock.Release();
+        }
+    }
+
+
 }
