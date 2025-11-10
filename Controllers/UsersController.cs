@@ -65,4 +65,21 @@ public class UsersController : ControllerBase
         var ok = await _repo.DeleteAsync(id);
         return ok ? NoContent() : StatusCode(500, "Delete failed.");
     }
+
+    [HttpGet("count")]
+    public async Task<IActionResult> GetUserCount()
+    {
+        var count = await _repo.GetUserCountAsync();
+        return Ok(new { count });
+    }
+
+    [HttpDelete("truncate")]
+    public async Task<IActionResult> TruncateUsers()
+    {
+        await _repo.TruncateUsersAsync();
+        return Ok(new { message = "All users have been deleted." });
+    }
+
+
+
 }

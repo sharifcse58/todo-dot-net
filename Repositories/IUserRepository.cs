@@ -9,6 +9,8 @@ public interface IUserRepository
     Task<User> CreateAsync(User user);
     Task<bool> UpdateAsync(string id, User user);
     Task<bool> DeleteAsync(string id);
+    Task<long> GetUserCountAsync();
+    Task TruncateUsersAsync();
 
     // Bulk insert method to add multiple users at once
     Task BulkInsertAsync(IEnumerable<User> users);

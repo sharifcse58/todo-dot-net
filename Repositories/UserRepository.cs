@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using MyApiProject.Models;
 
@@ -85,6 +86,19 @@ public class UserRepository : IUserRepository
             _seederLock.Release();
         }
     }
+
+    public async Task<long> GetUserCountAsync()
+    {
+        return await _users.CountDocumentsAsync(_ => true); // count all documents
+    }
+
+
+    public async Task TruncateUsersAsync()
+    {
+        await _users.DeleteManyAsync(_ => true); // delete all users
+    }
+
+
 
 
 }
