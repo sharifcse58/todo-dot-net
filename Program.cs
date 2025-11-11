@@ -2,11 +2,22 @@ using Microsoft.OpenApi.Models;
 using MyApiProject;
 using MyApiProject.Repositories;
 using MyApiProject.Middleware;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Set up Serilog logging
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()                // Log to the console
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)  // Log to a rolling file
+    .CreateLogger();
+
+// Use Serilog for ASP.NET Core logging
+builder.Host.UseSerilog();
+
 // Controllers + automatic 400 on invalid ModelState because of [ApiController]
 builder.Services.AddControllers();
+
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();

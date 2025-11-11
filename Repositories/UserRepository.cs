@@ -1,6 +1,10 @@
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using MyApiProject.Models;
+using Serilog;
 
 namespace MyApiProject.Repositories;
 
@@ -63,6 +67,30 @@ public class UserRepository : IUserRepository
     //    });
     //}
 
+
+
+    //public async Task BulkInsertAsync(IEnumerable<User> users)
+    //{
+    //    if (users == null || !users.Any()) return;
+
+    //    await _seederLock.WaitAsync(); // ensures one bulk insert runs at a time
+    //    try
+    //    {
+    //        const int batchSize = 2000;
+    //        var userList = users.ToList();
+
+    //        for (int i = 0; i < userList.Count; i += batchSize)
+    //        {
+    //            var batch = userList.Skip(i).Take(batchSize).ToList();
+    //            await _users.InsertManyAsync(batch, new InsertManyOptions { IsOrdered = false });
+    //        }
+    //    }
+    //    finally
+    //    {
+    //        _seederLock.Release();
+    //    }
+    //}
+
     private static readonly SemaphoreSlim _seederLock = new SemaphoreSlim(1, 1);
 
     public async Task BulkInsertAsync(IEnumerable<User> users)
@@ -70,24 +98,31 @@ public class UserRepository : IUserRepository
         if (users == null || !users.Any()) return;
 
         await _seederLock.WaitAsync(); // ensures one bulk insert runs at a time
+
+        // Log the start of the bulk insert
+        Log.Information("Starting bulk insert of {UserCount} users", users.Count());
+
         try
         {
-            const int batchSize = 2000;
-            var userList = users.ToList();
+            // Insert users in bulk, using MongoDB's InsertManyAsync method
+            await _users.InsertManyAsync(users, new InsertManyOptions { IsOrdered = false });
 
-            for (int i = 0; i < userList.Count; i += batchSize)
-            {
-                var batch = userList.Skip(i).Take(batchSize).ToList();
-                await _users.InsertManyAsync(batch, new InsertManyOptions { IsOrdered = false });
-            }
+            // Log the successful completion of the bulk insert
+            Log.Information("Successfully inserted {UserCount} users", users.Count());
         }
-        finally
+        catch (Exception ex)
+        {
+            // Log any errors that occur during the insert
+            Log.Error(ex, "Error occurred while inserting users");
+            throw;
+        }finally
         {
             _seederLock.Release();
         }
     }
 
-    public async Task<long> GetUserCountAsync()
+
+        public async Task<long> GetUserCountAsync()
     {
         return await _users.CountDocumentsAsync(_ => true); // count all documents
     }
