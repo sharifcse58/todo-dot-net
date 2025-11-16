@@ -121,8 +121,51 @@ public class UserRepository : IUserRepository
         }
     }
 
+    public async Task BulkInsertLoopAsync(IEnumerable<User> users)
+    {
+        if (users == null || !users.Any()) return;
 
-        public async Task<long> GetUserCountAsync()
+       // await _seederLock.WaitAsync(); // ensures one insert process runs at a time
+
+        Log.Information("Starting single insert loop for {UserCount} users", users.Count());
+
+        try
+        {
+            int successCount = 0;
+            int failCount = 0;
+
+            foreach (var user in users)
+            {
+                try
+                {
+                    // Insert one user at a time
+                    await _users.InsertOneAsync(user);
+                    successCount++;
+                }
+                catch (Exception ex)
+                {
+                    failCount++;
+                    Log.Warning(ex, "Failed to insert user with Email: {Email}", user.Email);
+                }
+            }
+
+            Log.Information("Inserted {SuccessCount} users successfully. {FailCount} failed.",
+                successCount, failCount);
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Unexpected error occurred during user insertion loop");
+            throw;
+        }
+        finally
+        {
+           // _seederLock.Release();
+        }
+    }
+
+
+
+    public async Task<long> GetUserCountAsync()
     {
         return await _users.CountDocumentsAsync(_ => true); // count all documents
     }

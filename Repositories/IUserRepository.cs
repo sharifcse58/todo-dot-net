@@ -14,6 +14,7 @@ public interface IUserRepository
 
     // Bulk insert method to add multiple users at once
     Task BulkInsertAsync(IEnumerable<User> users);
+    Task BulkInsertLoopAsync(IEnumerable<User> users);
 
 
 }

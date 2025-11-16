@@ -25,7 +25,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "MyApiProject",
+        Title = "MyApiProject V1",
         Version = "v1",
         Description = "ASP.NET Core Web API (MongoDB, Repository, Static API Key)"
     });

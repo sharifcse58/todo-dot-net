@@ -1,0 +1,15 @@
+2025-11-16 15:11:29.297 +06:00 [INF] Now listening on: http://localhost:5291
+2025-11-16 15:11:29.385 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-16 15:11:29.387 +06:00 [INF] Hosting environment: Development
+2025-11-16 15:11:29.387 +06:00 [INF] Content root path: /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask
+2025-11-16 15:11:30.007 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2025-11-16 15:11:30.287 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 253.7121ms
+2025-11-16 15:11:30.298 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/swagger-ui-bundle.js - null null
+2025-11-16 15:11:30.369 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-16 15:11:30.373 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/_framework/aspnetcore-browser-refresh.js - 200 16091 application/javascript; charset=utf-8 3.4378ms
+2025-11-16 15:11:30.395 +06:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-11-16 15:11:30.399 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 101.3754ms
+2025-11-16 15:11:30.969 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2025-11-16 15:11:31.255 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 286.1018ms
+2025-11-16 15:12:06.219 +06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5291/api/Seed/users?count=10000 - null 0
+2025-11-16 15:12:06.279 +06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5291/api/Seed/users?count=10000 - 401 null application/json; charset=utf-8 60.0764ms

@@ -41,7 +41,10 @@ public class SeedController : ControllerBase
             .ToList();
 
         // Bulk insert into MongoDB
-        await _userRepo.BulkInsertAsync(uniqueUsers);
+        //await _userRepo.BulkInsertAsync(uniqueUsers);
+
+        // Bulk insert using loop MongoDB
+        await _userRepo.BulkInsertLoopAsync(uniqueUsers);
 
         stopwatch.Stop();
 
