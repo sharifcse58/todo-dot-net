@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "bnwtRHjedOuHGFeU1MpZFawXDakAwJ/zO8yfme/PaSlKO8HnhwTKfgjURtzoUvl30c3K+tp8iMhQxhB4WmCDgw==",
+  "dgSpecHash": "GDGddaF5Jy8=",
   "success": true,
   "projectFilePath": "/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/MyApiProject.csproj",
   "expectedPackageFiles": [
     "/Users/md.shoriful/.nuget/packages/bogus/35.6.5/bogus.35.6.5.nupkg.sha512",
     "/Users/md.shoriful/.nuget/packages/dnsclient/1.6.1/dnsclient.1.6.1.nupkg.sha512",
+    "/Users/md.shoriful/.nuget/packages/microsoft.aspnetcore.mvc.versioning/5.1.0/microsoft.aspnetcore.mvc.versioning.5.1.0.nupkg.sha512",
+    "/Users/md.shoriful/.nuget/packages/microsoft.aspnetcore.mvc.versioning.apiexplorer/5.1.0/microsoft.aspnetcore.mvc.versioning.apiexplorer.5.1.0.nupkg.sha512",
     "/Users/md.shoriful/.nuget/packages/microsoft.aspnetcore.openapi/8.0.16/microsoft.aspnetcore.openapi.8.0.16.nupkg.sha512",
     "/Users/md.shoriful/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/md.shoriful/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.0/microsoft.extensions.configuration.abstractions.9.0.0.nupkg.sha512",
@@ -49,7 +51,10 @@
     "/Users/md.shoriful/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512",
     "/Users/md.shoriful/.nuget/packages/system.text.encodings.web/9.0.0/system.text.encodings.web.9.0.0.nupkg.sha512",
     "/Users/md.shoriful/.nuget/packages/system.text.json/9.0.0/system.text.json.9.0.0.nupkg.sha512",
-    "/Users/md.shoriful/.nuget/packages/zstdsharp.port/0.7.3/zstdsharp.port.0.7.3.nupkg.sha512"
+    "/Users/md.shoriful/.nuget/packages/zstdsharp.port/0.7.3/zstdsharp.port.0.7.3.nupkg.sha512",
+    "/Users/md.shoriful/.nuget/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "/Users/md.shoriful/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
+    "/Users/md.shoriful/.nuget/packages/microsoft.netcore.app.host.osx-x64/8.0.22/microsoft.netcore.app.host.osx-x64.8.0.22.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,1 +1,457 @@
 2025-11-18 00:05:05.859 +06:00 [INF] Application is shutting down...
+2025-11-18 13:30:38.376 +06:00 [INF] Now listening on: https://localhost:7064
+2025-11-18 13:30:38.434 +06:00 [INF] Now listening on: http://localhost:5291
+2025-11-18 13:30:38.437 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-18 13:30:38.438 +06:00 [INF] Hosting environment: Development
+2025-11-18 13:30:38.438 +06:00 [INF] Content root path: /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask
+2025-11-18 13:30:39.705 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/index.html - null null
+2025-11-18 13:30:50.402 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: An item with the same key has already been added. Key: v1
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.SwaggerDoc(SwaggerGenOptions swaggerGenOptions, String name, OpenApiInfo info)
+   at MyApiProject.Swagger.ConfigureSwaggerOptions.Configure(SwaggerGenOptions options) in /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/Swagger/ConfigureSwaggerOptions.cs:line 22
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitNoCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method2(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-18 13:30:50.531 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/index.html - 500 null text/html; charset=utf-8 10828.3293ms
+2025-11-18 13:30:50.796 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/favicon.ico - null null
+2025-11-18 13:30:54.072 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: An item with the same key has already been added. Key: v1
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.SwaggerDoc(SwaggerGenOptions swaggerGenOptions, String name, OpenApiInfo info)
+   at MyApiProject.Swagger.ConfigureSwaggerOptions.Configure(SwaggerGenOptions options) in /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/Swagger/ConfigureSwaggerOptions.cs:line 22
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at InvokeStub_ConfigureSwaggerGeneratorOptions..ctor(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitNoCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method2(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-18 13:30:54.081 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/favicon.ico - 500 null text/plain; charset=utf-8 3285.3712ms
+2025-11-18 13:32:15.956 +06:00 [INF] Now listening on: https://localhost:7064
+2025-11-18 13:32:16.008 +06:00 [INF] Now listening on: http://localhost:5291
+2025-11-18 13:32:16.012 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-18 13:32:16.013 +06:00 [INF] Hosting environment: Development
+2025-11-18 13:32:16.013 +06:00 [INF] Content root path: /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask
+2025-11-18 13:32:17.329 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/index.html - null null
+2025-11-18 13:32:24.288 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: An item with the same key has already been added. Key: v1
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.SwaggerDoc(SwaggerGenOptions swaggerGenOptions, String name, OpenApiInfo info)
+   at MyApiProject.Swagger.ConfigureSwaggerOptions.Configure(SwaggerGenOptions options) in /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/Swagger/ConfigureSwaggerOptions.cs:line 22
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitNoCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method2(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-18 13:32:24.387 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/index.html - 500 null text/html; charset=utf-8 7060.5398ms
+2025-11-18 13:32:24.676 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/favicon.ico - null null
+2025-11-18 13:34:56.697 +06:00 [INF] Now listening on: https://localhost:7064
+2025-11-18 13:34:56.747 +06:00 [INF] Now listening on: http://localhost:5291
+2025-11-18 13:34:56.751 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-18 13:34:56.751 +06:00 [INF] Hosting environment: Development
+2025-11-18 13:34:56.752 +06:00 [INF] Content root path: /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask
+2025-11-18 13:34:58.060 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/index.html - null null
+2025-11-18 13:34:58.324 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/index.html - 200 null text/html;charset=utf-8 266.2239ms
+2025-11-18 13:34:58.363 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/swagger-ui.css - null null
+2025-11-18 13:34:58.367 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/swagger-ui-standalone-preset.js - null null
+2025-11-18 13:34:58.367 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/swagger-ui-bundle.js - null null
+2025-11-18 13:34:58.631 +06:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-11-18 13:34:58.676 +06:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-11-18 13:34:58.679 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/swagger-ui.css - 200 152034 text/css 314.2941ms
+2025-11-18 13:34:58.681 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 310.4232ms
+2025-11-18 13:34:58.687 +06:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-11-18 13:34:58.687 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 320.3874ms
+2025-11-18 13:34:59.006 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - null null
+2025-11-18 13:34:59.320 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 313.8341ms
+2025-11-18 13:35:03.272 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v2/swagger.json - null null
+2025-11-18 13:35:03.283 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 11.2116ms
+2025-11-18 13:35:07.130 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - null null
+2025-11-18 13:35:07.149 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.1793ms
+2025-11-18 13:35:41.868 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/index.html?urls.primaryName=V1 - null null
+2025-11-18 13:35:41.873 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/index.html?urls.primaryName=V1 - 200 null text/html;charset=utf-8 28.4882ms
+2025-11-18 13:35:42.412 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - null null
+2025-11-18 13:35:42.425 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.1422ms
+2025-11-18 13:35:50.895 +06:00 [INF] Now listening on: https://localhost:7064
+2025-11-18 13:35:50.947 +06:00 [INF] Now listening on: http://localhost:5291
+2025-11-18 13:35:50.951 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-18 13:35:50.951 +06:00 [INF] Hosting environment: Development
+2025-11-18 13:35:50.951 +06:00 [INF] Content root path: /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask
+2025-11-18 13:35:52.172 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/index.html - null null
+2025-11-18 13:35:52.435 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/index.html - 200 null text/html;charset=utf-8 260.9476ms
+2025-11-18 13:35:52.820 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - null null
+2025-11-18 13:35:53.075 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 255.3587ms
+2025-11-18 13:35:56.748 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v2/swagger.json - null null
+2025-11-18 13:35:56.788 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 39.4835ms
+2025-11-18 13:35:59.186 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - null null
+2025-11-18 13:35:59.245 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 79.4325ms
+2025-11-18 13:36:50.718 +06:00 [INF] Now listening on: https://localhost:7064
+2025-11-18 13:36:50.772 +06:00 [INF] Now listening on: http://localhost:5291
+2025-11-18 13:36:50.776 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-18 13:36:50.777 +06:00 [INF] Hosting environment: Development
+2025-11-18 13:36:50.777 +06:00 [INF] Content root path: /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask
+2025-11-18 13:36:52.037 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/index.html - null null
+2025-11-18 13:36:52.296 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/index.html - 200 null text/html;charset=utf-8 257.8304ms
+2025-11-18 13:36:52.734 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - null null
+2025-11-18 13:36:53.041 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 307.2701ms
+2025-11-18 13:36:56.837 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v2/swagger.json - null null
+2025-11-18 13:36:56.847 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 10.2244ms
+2025-11-18 13:37:09.767 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/api/Users?page=1&pageSize=2 - null null
+2025-11-18 13:37:09.804 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 13:37:09.847 +06:00 [INF] Route matched with {action = "GetAllV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MyApiProject.Models.User]]] GetAllV1(Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 13:37:40.581 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject) in 30726.4757ms
+2025-11-18 13:37:40.583 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 13:37:40.787 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.TimeoutException: A timeout occurred after 29999ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/localhost:27017" }", EndPoint: "Unspecified/localhost:27017", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> System.Net.Sockets.SocketException (61): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.Connect(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(OperationContext operationContext)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(OperationContext operationContext)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(OperationContext operationContext)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(OperationContext operationContext)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2025-11-18T07:37:38.6786250Z", LastUpdateTimestamp: "2025-11-18T07:37:38.6786260Z" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServerAsync(OperationContext operationContext, IServerSelector selector)
+   at MongoDB.Driver.Core.Clusters.IClusterExtensions.SelectServerAndPinIfNeededAsync(IClusterInternal cluster, OperationContext operationContext, ICoreSessionHandle session, IServerSelector selector, IReadOnlyCollection`1 deprioritizedServers)
+   at MongoDB.Driver.Core.Bindings.ReadPreferenceBinding.GetReadChannelSourceAsync(OperationContext operationContext, IReadOnlyCollection`1 deprioritizedServers)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.AcquireOrReplaceChannelAsync(OperationContext operationContext, IReadOnlyCollection`1 deprioritizedServers)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.CreateAsync(OperationContext operationContext, IReadBinding binding, Boolean retryRequested)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(OperationContext operationContext, IReadBinding binding)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](OperationContext operationContext, IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, Boolean allowChannelPinning)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference explicitReadPreference, Nullable`1 timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindAsync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at MyApiProject.Repositories.UserRepository.GetAllAsync(Int32 page, Int32 pageSize) in /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/Repositories/UserRepository.cs:line 27
+   at MyApiProject.Controllers.UsersController.GetAllV1(Int32 page, Int32 pageSize) in /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/Controllers/UsersController.cs:line 23
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at MyApiProject.Middleware.ApiKeyMiddleware.InvokeAsync(HttpContext context, IConfiguration config) in /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/Middleware/ApiKeyMiddleware.cs:line 40
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-18 13:37:40.845 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/api/Users?page=1&pageSize=2 - 500 null text/plain; charset=utf-8 31076.9701ms
+2025-11-18 13:37:52.553 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/api/Users?page=1&pageSize=2 - null null
+2025-11-18 13:37:52.571 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 13:37:52.572 +06:00 [INF] Route matched with {action = "GetAllV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MyApiProject.Models.User]]] GetAllV1(Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 13:37:53.125 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[MyApiProject.Models.User, MyApiProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-18 13:37:53.183 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject) in 610.4417ms
+2025-11-18 13:37:53.183 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 13:37:53.184 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/api/Users?page=1&pageSize=2 - 200 null application/json; charset=utf-8 630.3229ms
+2025-11-18 13:37:59.855 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - null null
+2025-11-18 13:37:59.899 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.225ms
+2025-11-18 13:38:08.862 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/api/Users?page=1&pageSize=10 - null null
+2025-11-18 13:38:08.863 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 13:38:08.863 +06:00 [INF] Route matched with {action = "GetAllV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MyApiProject.Models.User]]] GetAllV1(Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 13:38:09.107 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[MyApiProject.Models.User, MyApiProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-18 13:38:09.108 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject) in 244.2675ms
+2025-11-18 13:38:09.108 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 13:38:09.108 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/api/Users?page=1&pageSize=10 - 200 null application/json; charset=utf-8 246.1884ms
+2025-11-18 13:38:27.919 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v2/swagger.json - null null
+2025-11-18 13:38:27.936 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 17.4437ms
+2025-11-18 13:38:31.402 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - null null
+2025-11-18 13:38:31.414 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.166ms
+2025-11-18 13:38:33.701 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v2/swagger.json - null null
+2025-11-18 13:38:33.705 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 4.0147ms
+2025-11-18 13:39:41.670 +06:00 [INF] Now listening on: https://localhost:7064
+2025-11-18 13:39:41.725 +06:00 [INF] Now listening on: http://localhost:5291
+2025-11-18 13:39:41.729 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-18 13:39:41.730 +06:00 [INF] Hosting environment: Development
+2025-11-18 13:39:41.730 +06:00 [INF] Content root path: /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask
+2025-11-18 13:39:43.059 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/index.html - null null
+2025-11-18 13:39:43.325 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/index.html - 200 null text/html;charset=utf-8 266.3773ms
+2025-11-18 13:39:43.723 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - null null
+2025-11-18 13:39:44.092 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 368.9117ms
+2025-11-18 13:39:51.435 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v2/swagger.json - null null
+2025-11-18 13:39:51.449 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 34.4861ms
+2025-11-18 13:39:55.506 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/api/Users?page=1&pageSize=2 - null null
+2025-11-18 13:39:55.526 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 13:39:55.574 +06:00 [INF] Route matched with {action = "GetAllV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MyApiProject.Models.User]]] GetAllV1(Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 13:39:56.389 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[MyApiProject.Models.User, MyApiProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-18 13:39:56.449 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject) in 870.0159ms
+2025-11-18 13:39:56.450 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 13:39:56.450 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/api/Users?page=1&pageSize=2 - 200 null application/json; charset=utf-8 944.4441ms
+2025-11-18 13:40:03.928 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - null null
+2025-11-18 13:40:03.943 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.055ms
+2025-11-18 13:40:28.012 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7064/api/Seed/users?count=10 - null 0
+2025-11-18 13:40:28.029 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.SeedController.BulkInsertUsers (MyApiProject)'
+2025-11-18 13:40:28.036 +06:00 [INF] Route matched with {action = "BulkInsertUsers", controller = "Seed"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BulkInsertUsers(Int32) on controller MyApiProject.Controllers.SeedController (MyApiProject).
+2025-11-18 13:40:28.056 +06:00 [INF] Starting bulk user insertion: 10 users
+2025-11-18 13:40:28.145 +06:00 [INF] Starting single insert loop for 10 users
+2025-11-18 13:40:28.699 +06:00 [INF] Inserted 10 users successfully. 0 failed.
+2025-11-18 13:40:28.699 +06:00 [INF] Inserted 10 users in 644 ms
+2025-11-18 13:40:28.702 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-18 13:40:28.709 +06:00 [INF] Executed action MyApiProject.Controllers.SeedController.BulkInsertUsers (MyApiProject) in 672.335ms
+2025-11-18 13:40:28.710 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.SeedController.BulkInsertUsers (MyApiProject)'
+2025-11-18 13:40:28.711 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7064/api/Seed/users?count=10 - 200 null application/json; charset=utf-8 700.2459ms
+2025-11-18 13:49:14.354 +06:00 [INF] Request starting HTTP/1.1 GET https://localhost:7064/api/Users?page=1&pageSize=100 - null null
+2025-11-18 13:49:14.355 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 13:49:14.355 +06:00 [INF] Route matched with {action = "GetAllV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MyApiProject.Models.User]]] GetAllV1(Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 13:49:14.705 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[MyApiProject.Models.User, MyApiProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-18 13:49:14.709 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject) in 353.5107ms
+2025-11-18 13:49:14.709 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 13:49:14.710 +06:00 [INF] Request finished HTTP/1.1 GET https://localhost:7064/api/Users?page=1&pageSize=100 - 200 null application/json; charset=utf-8 355.6997ms
+2025-11-18 13:49:26.961 +06:00 [INF] Request starting HTTP/1.1 GET https://localhost:7064/api/v1/Users?page=1&pageSize=100 - null null
+2025-11-18 13:49:26.964 +06:00 [INF] Request finished HTTP/1.1 GET https://localhost:7064/api/v1/Users?page=1&pageSize=100 - 404 0 null 3.5841ms
+2025-11-18 13:49:26.967 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7064/api/v1/Users, Response status code: 404
+2025-11-18 13:50:05.189 +06:00 [INF] Request starting HTTP/1.1 GET https://localhost:7064/api/Users?page=1&pageSize=100 - null null
+2025-11-18 13:50:05.190 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 13:50:05.190 +06:00 [INF] Route matched with {action = "GetAllV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MyApiProject.Models.User]]] GetAllV1(Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 13:50:05.529 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[MyApiProject.Models.User, MyApiProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-18 13:50:05.530 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject) in 339.6491ms
+2025-11-18 13:50:05.531 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 13:50:05.531 +06:00 [INF] Request finished HTTP/1.1 GET https://localhost:7064/api/Users?page=1&pageSize=100 - 200 null application/json; charset=utf-8 341.6976ms
+2025-11-18 13:50:12.898 +06:00 [INF] Request starting HTTP/1.1 GET https://localhost:7064/api/Users?page=1&pageSize=10 - null null
+2025-11-18 13:50:12.899 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 13:50:12.899 +06:00 [INF] Route matched with {action = "GetAllV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MyApiProject.Models.User]]] GetAllV1(Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 13:50:13.154 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[MyApiProject.Models.User, MyApiProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-18 13:50:13.155 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject) in 255.5849ms
+2025-11-18 13:50:13.155 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 13:50:13.155 +06:00 [INF] Request finished HTTP/1.1 GET https://localhost:7064/api/Users?page=1&pageSize=10 - 200 null application/json; charset=utf-8 257.1627ms
+2025-11-18 13:58:43.657 +06:00 [INF] Now listening on: https://localhost:7064
+2025-11-18 13:58:43.710 +06:00 [INF] Now listening on: http://localhost:5291
+2025-11-18 13:58:43.713 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-18 13:58:43.714 +06:00 [INF] Hosting environment: Development
+2025-11-18 13:58:43.714 +06:00 [INF] Content root path: /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask
+2025-11-18 13:58:45.040 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/index.html - null null
+2025-11-18 13:58:45.304 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/index.html - 200 null text/html;charset=utf-8 264.1393ms
+2025-11-18 13:58:45.561 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - null null
+2025-11-18 13:58:45.807 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 245.4595ms
+2025-11-18 13:58:47.601 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/index.html - null null
+2025-11-18 13:58:47.652 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/index.html - 200 null text/html;charset=utf-8 51.407ms
+2025-11-18 13:58:47.752 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - null null
+2025-11-18 13:58:47.844 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.6589ms
+2025-11-18 13:59:50.870 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - application/json 103
+2025-11-18 13:59:50.994 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - 401 null application/json; charset=utf-8 123.8449ms
+2025-11-18 14:00:10.626 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - application/json 103
+2025-11-18 14:00:10.635 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:00:10.684 +06:00 [INF] Route matched with {action = "SearchUsers", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchUsers(System.Collections.Generic.IEnumerable`1[MyApiProject.Models.UserSearchFilter], Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 14:00:11.145 +06:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-18 14:00:11.187 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject) in 497.004ms
+2025-11-18 14:00:11.187 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:00:11.188 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - 400 null application/problem+json; charset=utf-8 561.4238ms
+2025-11-18 14:00:30.526 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - application/json 102
+2025-11-18 14:00:30.555 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:00:30.556 +06:00 [INF] Route matched with {action = "SearchUsers", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchUsers(System.Collections.Generic.IEnumerable`1[MyApiProject.Models.UserSearchFilter], Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 14:00:30.559 +06:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-18 14:00:30.560 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject) in 3.5224ms
+2025-11-18 14:00:30.560 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:00:30.560 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - 400 null application/problem+json; charset=utf-8 33.975ms
+2025-11-18 14:02:52.965 +06:00 [INF] Now listening on: https://localhost:7064
+2025-11-18 14:02:53.021 +06:00 [INF] Now listening on: http://localhost:5291
+2025-11-18 14:02:53.025 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-18 14:02:53.026 +06:00 [INF] Hosting environment: Development
+2025-11-18 14:02:53.026 +06:00 [INF] Content root path: /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask
+2025-11-18 14:02:54.302 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/index.html - null null
+2025-11-18 14:02:54.581 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/index.html - 200 null text/html;charset=utf-8 281.699ms
+2025-11-18 14:02:54.695 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - null null
+2025-11-18 14:02:54.957 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 261.4941ms
+2025-11-18 14:03:24.787 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - text/json 78
+2025-11-18 14:03:24.851 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:03:24.902 +06:00 [INF] Route matched with {action = "SearchUsers", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchUsers(System.Collections.Generic.IEnumerable`1[MyApiProject.Models.UserSearchFilter], Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 14:03:25.922 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[MyApiProject.Models.User, MyApiProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-18 14:03:25.957 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject) in 1051.1722ms
+2025-11-18 14:03:25.958 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:03:25.958 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - 200 null application/json; charset=utf-8 1171.8579ms
+2025-11-18 14:03:53.909 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - text/json 95
+2025-11-18 14:03:53.942 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:03:53.943 +06:00 [INF] Route matched with {action = "SearchUsers", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchUsers(System.Collections.Generic.IEnumerable`1[MyApiProject.Models.UserSearchFilter], Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 14:03:54.307 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[MyApiProject.Models.User, MyApiProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-18 14:03:54.307 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject) in 365.0876ms
+2025-11-18 14:03:54.308 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:03:54.308 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - 200 null application/json; charset=utf-8 398.8689ms
+2025-11-18 14:04:08.056 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - text/json 61
+2025-11-18 14:04:08.058 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:04:08.058 +06:00 [INF] Route matched with {action = "SearchUsers", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchUsers(System.Collections.Generic.IEnumerable`1[MyApiProject.Models.UserSearchFilter], Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 14:04:08.074 +06:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-18 14:04:08.109 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject) in 50.4756ms
+2025-11-18 14:04:08.109 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:04:08.109 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - 400 null application/problem+json; charset=utf-8 52.9174ms
+2025-11-18 14:04:44.100 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - text/json 107
+2025-11-18 14:04:44.112 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:04:44.113 +06:00 [INF] Route matched with {action = "SearchUsers", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchUsers(System.Collections.Generic.IEnumerable`1[MyApiProject.Models.UserSearchFilter], Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 14:04:44.116 +06:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-18 14:04:44.116 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject) in 3.3991ms
+2025-11-18 14:04:44.117 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:04:44.117 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - 400 null application/problem+json; charset=utf-8 18.0308ms
+2025-11-18 14:04:59.995 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - text/json 100
+2025-11-18 14:05:00.051 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:05:00.051 +06:00 [INF] Route matched with {action = "SearchUsers", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchUsers(System.Collections.Generic.IEnumerable`1[MyApiProject.Models.UserSearchFilter], Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 14:05:00.391 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[MyApiProject.Models.User, MyApiProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-18 14:05:00.392 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject) in 340.9052ms
+2025-11-18 14:05:00.392 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:05:00.392 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - 200 null application/json; charset=utf-8 397.2957ms
+2025-11-18 14:05:16.432 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - text/json 104
+2025-11-18 14:05:16.457 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:05:16.457 +06:00 [INF] Route matched with {action = "SearchUsers", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchUsers(System.Collections.Generic.IEnumerable`1[MyApiProject.Models.UserSearchFilter], Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 14:05:16.459 +06:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-18 14:05:16.462 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject) in 4.8856ms
+2025-11-18 14:05:16.462 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:05:16.462 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - 400 null application/problem+json; charset=utf-8 31.0181ms
+2025-11-18 14:05:28.402 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - text/json 101
+2025-11-18 14:05:28.451 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:05:28.451 +06:00 [INF] Route matched with {action = "SearchUsers", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchUsers(System.Collections.Generic.IEnumerable`1[MyApiProject.Models.UserSearchFilter], Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 14:05:28.791 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[MyApiProject.Models.User, MyApiProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-18 14:05:28.791 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject) in 340.2013ms
+2025-11-18 14:05:28.792 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:05:28.792 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - 200 null application/json; charset=utf-8 389.9002ms
+2025-11-18 14:05:46.570 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7064/api/Users?page=1&pageSize=10 - null null
+2025-11-18 14:05:46.595 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 14:05:46.601 +06:00 [INF] Route matched with {action = "GetAllV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MyApiProject.Models.User]]] GetAllV1(Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 14:05:46.841 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[MyApiProject.Models.User, MyApiProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-18 14:05:46.845 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject) in 244.3245ms
+2025-11-18 14:05:46.846 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.GetAllV1 (MyApiProject)'
+2025-11-18 14:05:46.846 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7064/api/Users?page=1&pageSize=10 - 200 null application/json; charset=utf-8 275.8194ms
+2025-11-18 14:06:15.031 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - text/json 128
+2025-11-18 14:06:15.060 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:06:15.060 +06:00 [INF] Route matched with {action = "SearchUsers", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchUsers(System.Collections.Generic.IEnumerable`1[MyApiProject.Models.UserSearchFilter], Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 14:06:15.445 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[MyApiProject.Models.User, MyApiProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-18 14:06:15.445 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject) in 384.57ms
+2025-11-18 14:06:15.445 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:06:15.445 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - 200 null application/json; charset=utf-8 414.7325ms
+2025-11-18 14:06:45.526 +06:00 [INF] Request starting HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - text/json 421
+2025-11-18 14:06:45.554 +06:00 [INF] Executing endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:06:45.557 +06:00 [INF] Route matched with {action = "SearchUsers", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SearchUsers(System.Collections.Generic.IEnumerable`1[MyApiProject.Models.UserSearchFilter], Int32, Int32) on controller MyApiProject.Controllers.UsersController (MyApiProject).
+2025-11-18 14:06:46.118 +06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[MyApiProject.Models.User, MyApiProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-18 14:06:46.119 +06:00 [INF] Executed action MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject) in 561.0812ms
+2025-11-18 14:06:46.119 +06:00 [INF] Executed endpoint 'MyApiProject.Controllers.UsersController.SearchUsers (MyApiProject)'
+2025-11-18 14:06:46.119 +06:00 [INF] Request finished HTTP/2 POST https://localhost:7064/api/Users/search?page=1&pageSize=10 - 200 null application/json; charset=utf-8 596.2365ms

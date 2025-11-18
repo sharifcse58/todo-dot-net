@@ -43,6 +43,52 @@ public class UserRepository : IUserRepository
         return user;
     }
 
+    public async Task<IEnumerable<User>> SearchUsersAsync(
+    IEnumerable<UserSearchFilter> filters,
+    int page,
+    int pageSize)
+    {
+        var builder = Builders<User>.Filter;
+
+        var filterList = new List<FilterDefinition<User>>();
+
+        // Loop through each filter object
+        foreach (var f in filters)
+        {
+            var subFilters = new List<FilterDefinition<User>>();
+
+            if (!string.IsNullOrEmpty(f.Name))
+                subFilters.Add(builder.Regex(u => u.Name, new MongoDB.Bson.BsonRegularExpression(f.Name, "i")));
+
+            if (!string.IsNullOrEmpty(f.Email))
+                subFilters.Add(builder.Regex(u => u.Email, new MongoDB.Bson.BsonRegularExpression(f.Email, "i")));
+
+            if (!string.IsNullOrEmpty(f.Role))
+                subFilters.Add(builder.Regex(u => u.Role, new MongoDB.Bson.BsonRegularExpression(f.Role, "i")));
+
+            // If filter has at least one field
+            if (subFilters.Any())
+                filterList.Add(builder.And(subFilters));
+        }
+
+        // If no filter provided, return empty result
+        if (!filterList.Any())
+            return Enumerable.Empty<User>();
+
+        // Final OR filter
+        var finalFilter = builder.Or(filterList);
+
+        int skip = (page - 1) * pageSize;
+
+        return await _users
+            .Find(finalFilter)
+            .SortByDescending(u => u.CreatedAt)
+            .Skip(skip)
+            .Limit(pageSize)
+            .ToListAsync();
+    }
+
+
     public async Task<bool> UpdateAsync(string id, User user)
     {
         user.Id = id;
@@ -115,7 +161,8 @@ public class UserRepository : IUserRepository
             // Log any errors that occur during the insert
             Log.Error(ex, "Error occurred while inserting users");
             throw;
-        }finally
+        }
+        finally
         {
             _seederLock.Release();
         }
@@ -125,7 +172,7 @@ public class UserRepository : IUserRepository
     {
         if (users == null || !users.Any()) return;
 
-       // await _seederLock.WaitAsync(); // ensures one insert process runs at a time
+        // await _seederLock.WaitAsync(); // ensures one insert process runs at a time
 
         Log.Information("Starting single insert loop for {UserCount} users", users.Count());
 
@@ -159,7 +206,7 @@ public class UserRepository : IUserRepository
         }
         finally
         {
-           // _seederLock.Release();
+            // _seederLock.Release();
         }
     }
 

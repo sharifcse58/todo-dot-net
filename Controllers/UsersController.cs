@@ -6,6 +6,9 @@ namespace MyApiProject.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+// Support V1 & V2 in same controller
+[ApiVersion("1.0")]
+[ApiVersion("2.0")]
 public class UsersController : ControllerBase
 {
     private readonly IUserRepository _repo;
@@ -14,9 +17,42 @@ public class UsersController : ControllerBase
 
     // GET /api/users
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<User>>> GetAll([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
+    [MapToApiVersion("1.0")]
+    public async Task<ActionResult<IEnumerable<User>>> GetAllV1([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
     {
         var users = await _repo.GetAllAsync(page, pageSize);
+        return Ok(new
+        {
+            page,
+            pageSize,
+            count = users.Count(),
+            data = users
+        });
+    }
+
+    [HttpGet]
+    [MapToApiVersion("2.0")]
+    public async Task<ActionResult<IEnumerable<User>>> GetAllV2([FromQuery] int page = 1, [FromQuery] int pageSize = 2)
+    {
+        var users = await _repo.GetAllAsync(page, pageSize);
+        return Ok(new
+        {
+            page,
+            pageSize,
+            count = users.Count(),
+            data = users
+        });
+    }
+
+    [HttpPost("search")]
+    [MapToApiVersion("1.0")]
+    public async Task<IActionResult> SearchUsers(
+    [FromBody] IEnumerable<UserSearchFilter> filters,
+    [FromQuery] int page = 1,
+    [FromQuery] int pageSize = 10)
+    {
+        var users = await _repo.SearchUsersAsync(filters, page, pageSize);
+
         return Ok(new
         {
             page,
@@ -29,6 +65,7 @@ public class UsersController : ControllerBase
 
     // GET /api/users/{id}
     [HttpGet("{id:length(24)}")]
+    [MapToApiVersion("1.0")]
     public async Task<ActionResult<User>> GetById(string id)
     {
         var user = await _repo.GetByIdAsync(id);
@@ -46,6 +83,7 @@ public class UsersController : ControllerBase
 
     // PUT /api/users/{id}  (requires x-api-key)
     [HttpPut("{id:length(24)}")]
+    [MapToApiVersion("1.0")]
     public async Task<IActionResult> Update(string id, [FromBody] User user)
     {
         var exists = await _repo.GetByIdAsync(id);
@@ -57,6 +95,7 @@ public class UsersController : ControllerBase
 
     // DELETE /api/users/{id}  (requires x-api-key)
     [HttpDelete("{id:length(24)}")]
+    [MapToApiVersion("1.0")]
     public async Task<IActionResult> Delete(string id)
     {
         var exists = await _repo.GetByIdAsync(id);
@@ -67,6 +106,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet("count")]
+    [MapToApiVersion("1.0")]
     public async Task<IActionResult> GetUserCount()
     {
         var count = await _repo.GetUserCountAsync();
@@ -74,6 +114,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpDelete("truncate")]
+    [MapToApiVersion("1.0")]
     public async Task<IActionResult> TruncateUsers()
     {
         await _repo.TruncateUsersAsync();

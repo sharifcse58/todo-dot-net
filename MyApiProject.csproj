@@ -17,6 +17,14 @@
     <PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
     <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Swagger\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Swagger\" />
+  </ItemGroup>
 </Project>

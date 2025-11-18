@@ -16,5 +16,12 @@ public interface IUserRepository
     Task BulkInsertAsync(IEnumerable<User> users);
     Task BulkInsertLoopAsync(IEnumerable<User> users);
 
+    Task<IEnumerable<User>> SearchUsersAsync(
+        IEnumerable<UserSearchFilter> filters,
+        int page,
+        int pageSize
+    );
+
+
 
 }
