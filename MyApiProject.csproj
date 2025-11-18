@@ -23,8 +23,12 @@
 
   <ItemGroup>
     <None Remove="Swagger\" />
+    <None Remove="Data\" />
+    <None Remove="DTOs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Swagger\" />
+    <Folder Include="Data\" />
+    <Folder Include="DTOs\" />
   </ItemGroup>
 </Project>

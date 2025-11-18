@@ -5,7 +5,7 @@ using MyApiProject.Repositories;
 namespace MyApiProject.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v{version:apiVersion}/[controller]")]
 // Support V1 & V2 in same controller
 [ApiVersion("1.0")]
 [ApiVersion("2.0")]
@@ -21,6 +21,7 @@ public class UsersController : ControllerBase
     public async Task<ActionResult<IEnumerable<User>>> GetAllV1([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
     {
         var users = await _repo.GetAllAsync(page, pageSize);
+
         return Ok(new
         {
             page,
@@ -52,14 +53,15 @@ public class UsersController : ControllerBase
     [FromQuery] int pageSize = 10)
     {
         var users = await _repo.SearchUsersAsync(filters, page, pageSize);
+        return Ok("searcing");
 
-        return Ok(new
-        {
-            page,
-            pageSize,
-            count = users.Count(),
-            data = users
-        });
+        //return Ok(new
+        //{
+        //    page,
+        //    pageSize,
+        //    count = users.Count(),
+        //    data = users
+        //});
     }
 
 

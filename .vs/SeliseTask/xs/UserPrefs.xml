@@ -1,34 +1,46 @@
 ﻿<Properties StartupConfiguration="{C0D0E675-E8F9-D81F-0AA2-AC8D7C9F72D6}|https">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
       <File FileName="appsettings.json" />
-      <File FileName="Controllers/SeedController.cs" />
       <File FileName="Controllers/UsersController.cs" />
-      <File FileName="Repositories/UserRepository.cs" />
+      <File FileName="Program.cs" Line="46" Column="38" />
+      <File FileName="Swagger/ConfigureSwaggerOptions.cs" />
+      <File FileName="Models/UserSearchFilter.cs" />
       <File FileName="Repositories/IUserRepository.cs" />
       <File FileName="Models/User.cs" />
-      <File FileName="logs/log-20251111.txt" />
-      <File FileName="Properties/launchSettings.json" />
-      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="DTOs/CountryDto.cs" />
+      <File FileName="Data/CountryData.cs" />
+      <File FileName="Controllers/TestController.cs" />
+      <File FileName="Data/UserData.cs" />
+      <File FileName="DTOs/UserDto.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SeliseTask">
             <Node name="MyApiProject">
-              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="DTOs" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+              <Node name="Swagger" expanded="True" />
               <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="SeliseTask" expanded="True" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.MyApiProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

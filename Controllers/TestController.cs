@@ -8,6 +8,8 @@ using MyApiProject.Models;
 using MyApiProject.Repositories;
 using Microsoft.AspNetCore.Connections;
 using MongoDB.Bson.IO;
+using MyApiProject.Data;
+using MyApiProject.DTOs;
 
 namespace MyApiProject.Controllers
 {
@@ -134,13 +136,35 @@ namespace MyApiProject.Controllers
         [HttpGet("test")]
         public IActionResult Test()
         {
-            string myName = "mehedi";
-            const int itemCount = 4;
+            // Country data test
+            var countriesData = CountryData.Get();
 
-            myName = "asdfasdf";
+            var response = new List<CountryDto>();
+
+            foreach (var country in countriesData)
+            {
+                response.Add(new CountryDto
+                {
+                    Id = country.Id,
+                    Name = country.Name
+                });
+            }
 
 
-            return Ok(new { message = $"tested {myName} {itemCount}" });
+            var users = UserData.Get();
+
+            var userRes = new List<UserDto>();
+
+
+            foreach (var user in users)
+            {
+
+                userRes.Add(new UserDto { Id = user.Id, Name = user.Name, Email = user.Email });
+
+            }
+
+
+            return Ok(userRes);
         }
     }
 }
