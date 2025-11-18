@@ -1,37 +1,34 @@
 ﻿<Properties StartupConfiguration="{C0D0E675-E8F9-D81F-0AA2-AC8D7C9F72D6}|https">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.MyApiProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/TestController.cs">
-    <Files>
-      <File FileName="appsettings.json" />
-      <File FileName="Controllers/SeedController.cs" />
-      <File FileName="Controllers/UsersController.cs" Line="64" Column="1" />
-      <File FileName="Repositories/UserRepository.cs" />
-      <File FileName="Repositories/IUserRepository.cs" />
-      <File FileName="Models/User.cs" />
-      <File FileName="logs/log-20251111.txt" />
-      <File FileName="Properties/launchSettings.json" />
-      <File FileName="Program.cs" Line="28" Column="30" />
-      <File FileName="Controllers/TestController.cs" Line="140" Column="33" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SeliseTask" selected="True">
-            <Node name="MyApiProject">
-              <Node name="Controllers" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="appsettings.json" />
+      <File FileName="Controllers/SeedController.cs" />
+      <File FileName="Controllers/UsersController.cs" />
+      <File FileName="Repositories/UserRepository.cs" />
+      <File FileName="Repositories/IUserRepository.cs" />
+      <File FileName="Models/User.cs" />
+      <File FileName="logs/log-20251111.txt" />
+      <File FileName="Properties/launchSettings.json" />
+      <File FileName="Program.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SeliseTask">
+            <Node name="MyApiProject">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MyApiProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

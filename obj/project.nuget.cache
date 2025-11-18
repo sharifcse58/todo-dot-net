@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Q38DQ/Z5304=",
+  "dgSpecHash": "bnwtRHjedOuHGFeU1MpZFawXDakAwJ/zO8yfme/PaSlKO8HnhwTKfgjURtzoUvl30c3K+tp8iMhQxhB4WmCDgw==",
   "success": true,
   "projectFilePath": "/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/MyApiProject.csproj",
   "expectedPackageFiles": [
@@ -49,10 +49,7 @@
     "/Users/md.shoriful/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512",
     "/Users/md.shoriful/.nuget/packages/system.text.encodings.web/9.0.0/system.text.encodings.web.9.0.0.nupkg.sha512",
     "/Users/md.shoriful/.nuget/packages/system.text.json/9.0.0/system.text.json.9.0.0.nupkg.sha512",
-    "/Users/md.shoriful/.nuget/packages/zstdsharp.port/0.7.3/zstdsharp.port.0.7.3.nupkg.sha512",
-    "/Users/md.shoriful/.nuget/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
-    "/Users/md.shoriful/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
-    "/Users/md.shoriful/.nuget/packages/microsoft.netcore.app.host.osx-x64/8.0.22/microsoft.netcore.app.host.osx-x64.8.0.22.nupkg.sha512"
+    "/Users/md.shoriful/.nuget/packages/zstdsharp.port/0.7.3/zstdsharp.port.0.7.3.nupkg.sha512"
   ],
   "logs": []
 }
