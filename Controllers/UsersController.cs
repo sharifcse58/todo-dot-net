@@ -53,15 +53,14 @@ public class UsersController : ControllerBase
     [FromQuery] int pageSize = 10)
     {
         var users = await _repo.SearchUsersAsync(filters, page, pageSize);
-        return Ok("searcing");
 
-        //return Ok(new
-        //{
-        //    page,
-        //    pageSize,
-        //    count = users.Count(),
-        //    data = users
-        //});
+        return Ok(new
+        {
+            page,
+            pageSize,
+            count = users.Count(),
+            data = users
+        });
     }
 
 
