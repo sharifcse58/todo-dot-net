@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"21Lk/dzE10xPZOqik37GRaOqrh7LQZkR0JMmA9mnpLw=","Source":"MyApiProject","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "oxz99aNH8EbbrK4Gh/aCxlcyFm/WEmd9OB8EFoWB+WA=",
+  "Source": "MyApiProject",
+  "BasePath": "_content/MyApiProject",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

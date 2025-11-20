@@ -1005,3 +1005,9 @@ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/
 2025-11-18 23:38:39.425 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/_framework/aspnetcore-browser-refresh.js - 200 16091 application/javascript; charset=utf-8 6.6207ms
 2025-11-18 23:38:39.684 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
 2025-11-18 23:38:39.996 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 312.2889ms
+2025-11-18 23:51:39.548 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html?urls.primaryName=V1 - null null
+2025-11-18 23:51:39.553 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html?urls.primaryName=V1 - 200 null text/html;charset=utf-8 5.3369ms
+2025-11-18 23:51:39.615 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-18 23:51:39.627 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/_framework/aspnetcore-browser-refresh.js - 200 16091 application/javascript; charset=utf-8 12.355ms
+2025-11-18 23:51:39.885 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2025-11-18 23:51:39.927 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.8938ms

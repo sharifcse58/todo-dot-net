@@ -101,11 +101,8 @@
 /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/MyApiProject.pdb
 /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/MyApiProject.genruntimeconfig.cache
 /Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/ref/MyApiProject.dll
-/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/bin/Debug/net8.0/MyApiProject.staticwebassets.endpoints.json
-/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/rpswa.dswa.cache.json
-/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/rjimswa.dswa.cache.json
-/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
-/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
-/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/staticwebassets.build.json.cache
-/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/staticwebassets.build.endpoints.json
-/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/swae.build.ex.cache
+/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/staticwebassets/msbuild.MyApiProject.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/staticwebassets/msbuild.build.MyApiProject.props
+/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.MyApiProject.props
+/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.MyApiProject.props
+/Users/md.shoriful/Documents/Sites/dotNet/SeliseTask/obj/Debug/net8.0/staticwebassets.pack.json
